@@ -32,7 +32,7 @@ const ProfileDrawer = ({conversationData, isOpen, onClose, users}) => {
     };
 
     return isActive ? 'Active' : 'Offline';
-  }, [conversationData.users]);
+  }, [conversationData.users, conversationData.isGroup, isActive]);
 
 
   return (
