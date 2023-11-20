@@ -13,7 +13,7 @@ const AvatarGroup = ({users = []}) => {
   return (
     <div className="relative h-11 w-11">
       {slicedUsers.map((user, index) => (
-        <span className={`absolute inline-block rounded-full overflow-hidden h-[21px] w-[21px] ${positionMap[index]}`}>
+        <span key={user.name} className={`absolute inline-block rounded-full overflow-hidden h-[21px] w-[21px] ${positionMap[index]}`}>
           <Image src={user?.image || '/images/placeholder.jpg' } alt="Avatar" fill/>
         </span>
       ))}
