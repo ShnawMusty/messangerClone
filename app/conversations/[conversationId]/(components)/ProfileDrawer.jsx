@@ -102,7 +102,7 @@ const ProfileDrawer = ({conversationData, isOpen, onClose, users}) => {
                     <p className="font-medium text-gray-700" >Emails:</p>
                     <span className="pl-2">
                       {conversationData.users.map((user) => (
-                        <div className="flex gap-2">
+                        <div key={user.name}  className="flex gap-2">
                           <h2 className="text-gray-600">{user.name}:</h2>
                           <span className="text-red-800 font-medium">
                             {user.email}
